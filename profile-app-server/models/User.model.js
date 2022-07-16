@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-
+// TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
     username: {
@@ -12,14 +12,15 @@ const userSchema = new Schema(
   {
     campus: {
       type: String,
-      cities:["Madrid", "Barcelona", "Miami", "Paris", "Berlin", "Amsterdam", "México", "Sao Paulo", "Lisbon", "Remote"],
+      enum:["Madrid", "Barcelona", "Miami", "Paris", "Berlin", "Amsterdam", "México", "Sao Paulo", "Lisbon", "Remote"],
       default:"",
     }
   },
   {
     course: {
       type: String,
-      courses:["Web Dev", "UX/UI", "Data Analytics","Cyber Security"],
+      enum:["Web Dev", "UX/UI", "Data Analytics","Cyber Security"],
+      default:"",
     }
   },
   {
